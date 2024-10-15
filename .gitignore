@@ -1,0 +1,44 @@
+# Byte-compiled Python files
+*.py[cod]
+
+# Log files
+*.log
+
+# Database files
+db.sqlite3
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Django files
+*.pot
+*.mo
+
+# Virtual environment files
+venv/
+env/
+
+# pip files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Django migrations
+restaurant/migrations/__pycache__/
+
+# Static files
+restaurant/staticfiles/
+
+# Media files
+restaurant/media/
+
+# .env file
+.env
+
+# Local settings file
+LittleLemon/local_settings.py
