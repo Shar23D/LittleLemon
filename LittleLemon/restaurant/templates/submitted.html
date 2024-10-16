@@ -1,22 +1,29 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
-<!--Begin row-->
-<div class="row">
-    <!--Begin col-->
-    <div class="column">
+<section>
+  <article>
+    <!--Begin row-->
+    <div class="row">
+      <!--Begin col-->
+      <div class="column">
         <h1>Reservation Submitted Successfully!</h1>
-        <p>Thank you for submitting your reservation. We will get back to you soon.</p>
-    </div>
-    <!--End col-->
-    <!--Begin col-->
-    <div class="column">
+        <p>
+          Thank you for submitting your reservation. We will get back to you
+          soon.
+        </p>
+      </div>
+      <!--End col-->
+      <!--Begin col-->
+      <div class="column">
         <figure class="reservation-image">
-            <img
-              src="{% static 'img/restaurant_inside.jpg' %}"
-              alt="restaurant seatings"
-            />
-          </figure>
+          <img
+            src="{% static 'img/restaurant_inside.jpg' %}"
+            alt="restaurant seatings"
+          />
+        </figure>
+      </div>
+      <!--End col-->
     </div>
-    <!--End col-->
-</div>
-<!--End row-->
+    <!--End row-->
+  </article>
+</section>
 {% endblock %}

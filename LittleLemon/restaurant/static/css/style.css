@@ -236,12 +236,6 @@ footer p {
   padding: 0px 12px;
 }
 
-.reservation-image img {
-  max-width: 100%;
-  height: auto;
-  padding-top: 20px;
-}
-
 .videowrap {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */

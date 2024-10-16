@@ -1,34 +1,38 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
-<h1>Menu</h1>
-<!--Begin row-->
-<div class="row">
-  <!--Begin col-->
-  <div class="column">
-    <!-- Create for loop -->
-    {% for item in menu %}
-    <p>
-      <!-- Add DTL variable for name -->
-      <a href="{% url 'menu_item' pk=item.pk %}"> {{ item.name }} </a>
-      <span class="menu-price">
-        <!-- Add DTL variable for price -->
-        ${{item.price}}
-      </span>
-    </p>
+<section>
+  <article>
+    <h1>Menu</h1>
+    <!--Begin row-->
+    <div class="row">
+      <!--Begin col-->
+      <div class="column">
+        <!-- Create for loop -->
+        {% for item in menu %}
+        <p>
+          <!-- Add DTL variable for name -->
+          <a href="{% url 'menu_item' pk=item.pk %}"> {{ item.name }} </a>
+          <span class="menu-price">
+            <!-- Add DTL variable for price -->
+            ${{item.price}}
+          </span>
+        </p>
 
-    <!-- End or loop -->
-    {% endfor %}
-  </div>
-  <!--End col-->
-        <!--Begin col-->
-        <div class="column">
-          <figure class="figure">
-            <img
-              src="{% static 'img/restaurant food.jpg' %}"
-              alt="restaurant food"
-            />
-          </figure>
-        </div>
-        <!--End col-->
-</div>
-<!--End row-->
+        <!-- End or loop -->
+        {% endfor %}
+      </div>
+      <!--End col-->
+      <!--Begin col-->
+      <div class="column">
+        <figure class="figure">
+          <img
+            src="{% static 'img/restaurant food.jpg' %}"
+            alt="restaurant food"
+          />
+        </figure>
+      </div>
+      <!--End col-->
+    </div>
+    <!--End row-->
+  </article>
+</section>
 {% endblock %}
