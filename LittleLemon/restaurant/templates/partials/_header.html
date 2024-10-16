@@ -1,6 +1,8 @@
 {% load static %}
 <header>
-    <img src="{% static 'img/logo.png' %}" href="{% url 'home' %}"/>
+    <a href="{% url 'home' %}">
+        <img src="{% static 'img/logo.png' %}" alt="Logo">
+      </a>
 </header>
 <nav>
     <ul>

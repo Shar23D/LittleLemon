@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from .forms import BookingForm
 from .models import Menu
 
@@ -16,11 +17,18 @@ def book(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
-            # Redirect or render a success page
+            # Display a success message
+            messages.success(request, 'Reservation submitted successfully!')
+            # Redirect to the success page
+            return redirect('submitted')
+
     else:
         form = BookingForm()
     
     return render(request, 'book.html', {'form': form})
+
+def submitted(request):
+    return render(request, 'submitted.html')
 
 
 def menu(request):
